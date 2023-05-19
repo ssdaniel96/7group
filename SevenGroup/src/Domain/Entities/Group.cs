@@ -18,6 +18,10 @@ public sealed class Group : Entity
 
     public bool ThereIsActiveReadingPlan => DefaultReadingPlan != null;
 
+#pragma warning disable CS8618
+    private Group(){}
+#pragma warning restore CS8618
+    
     public Group(string name, string token, Source source)
     {
         ExternalId = new(token, source);
