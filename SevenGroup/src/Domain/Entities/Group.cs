@@ -12,9 +12,9 @@ public sealed class Group : Entity
     public IReadOnlyList<Member> Members => _members.AsReadOnly();
     public IReadOnlyList<Book> Books => _books.AsReadOnly();
     public IReadOnlyList<ReadingPlan> ReadingPlans => _readingPlans.AsReadOnly();
-    private List<Member> _members = new();
-    private List<Book> _books = new();
-    private List<ReadingPlan> _readingPlans = new();
+    private readonly List<Member> _members = new();
+    private readonly List<Book> _books = new();
+    private readonly List<ReadingPlan> _readingPlans = new();
 
     public bool ThereIsActiveReadingPlan => DefaultReadingPlan != null;
 
